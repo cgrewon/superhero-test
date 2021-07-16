@@ -1,8 +1,9 @@
+const baseUrl = "https://superheroapi.com/";
 const Api = {
   search: (name) => {
     return new Promise((resolve, reject) => {
       // let url = baseUrl + "search/" + name;
-      let url = "api/520147245898688/search/" + name;
+      let url = baseUrl + "api/520147245898688/search/" + name;
 
       var requestOptions = {
         method: "GET",
