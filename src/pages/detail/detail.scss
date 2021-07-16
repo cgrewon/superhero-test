@@ -1,0 +1,43 @@
+.details {
+    .comp {
+        .row {
+            align-items: flex-start;
+
+            div {
+                &:nth-child(2) {
+                    flex: 1;
+                }
+                img {
+                    margin-top: 10px;
+                    box-shadow: 0px 0px 25px #fefefe;
+                    border-radius: 5px;
+                }
+            }
+            table {
+                flex: 1;
+                padding-left: 50px;
+                color: white;
+                width: 100%;
+
+                tbody {
+                    tr {
+                        td {
+                            border: 0.5px solid gray;
+                            padding: 5px;
+                            font-size: 1.2em;
+                            &:nth-child(1) {
+                                color: rgb(86, 168, 168);
+                            }
+                        }
+                        .cell-head {
+                            border: 0;
+                            font-size: 1em;
+                            color: aqua !important;
+                            padding: 25px 15px 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

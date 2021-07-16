@@ -1,0 +1,29 @@
+.nav-wrapper {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(101, 198, 250, 0.103);
+    .space {
+        flex-grow: 1;
+    }
+    .menu {
+        margin-right: 20px;
+        a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+    .nav-logo {
+        margin-left: 20px;
+
+        .logo-title {
+            font-size: 30px;
+            color: white;
+            font-family: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif";
+        }
+    }
+}

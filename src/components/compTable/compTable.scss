@@ -1,0 +1,28 @@
+#compContainer {
+    table {
+        tbody {
+            tr {
+                td {
+                    img {
+                        cursor: pointer;
+                        margin: 0 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.btn-reset {
+    position: absolute;
+    right: 20px;
+    top: 0px;
+    margin-right: 20px;
+    height: 30px;
+    font-size: 0.8em;
+    padding: 8px 5px 5px;
+    border-radius: 8px;
+}
+.compTitleContainer {
+    position: relative;
+}

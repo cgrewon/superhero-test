@@ -1,0 +1,59 @@
+.App {
+  // text-align: center;
+
+  .wrapper {
+    max-width: 1024px;
+    margin: 20px auto;
+    padding: 10px 20px;
+  }
+}
+
+body {
+  background-color: #282c34;
+}
+.bgimg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  opacity: 0.2;
+  z-index: -1;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn {
+  width: 100px;
+  padding: 10px 20px;
+  background: #617dfb;
+  color: white;
+  cursor: pointer;
+  &:hover {
+    background: #4355a5;
+    transition: all 0.5s ease-out;
+  }
+  &:focus {
+    background-color: #919bc9;
+  }
+}
+
+.shadow {
+  box-shadow: 0px 2px 15px #b9b9b9bb;
+  &:hover {
+    box-shadow: 0px 2px 25px #f3eeae;
+    transition: all 0.5s ease;
+  }
+}
+
+.btnSearch {
+  font-size: 1.2em;
+  padding: 10px 10px;
+  margin-left: 10px;
+  margin-top: 1px;
+  border-radius: 5px;
+  text-align: center;
+}
