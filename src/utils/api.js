@@ -3,7 +3,9 @@ const Api = {
   search: (name) => {
     return new Promise((resolve, reject) => {
       // let url = baseUrl + "search/" + name;
-      let url = "api/520147245898688/search/" + name;
+      // let url = "api/520147245898688/search/" + name;
+      let url =
+        "https://public-bucket-challenges.s3.amazonaws.com/front-end-challenge/output2.json";
 
       var requestOptions = {
         method: "GET",
@@ -13,10 +15,11 @@ const Api = {
       fetch(url, requestOptions)
         .then((response) => response.json())
         .then((result) => {
-          if (result.response == "success") {
-            resolve(result.results);
+          console.log(result);
+          if (Array.isArray(result)) {
+            resolve(result);
           } else {
-            reject(result);
+            reject({ error: "Error while fetch api." });
           }
         })
         .catch((error) => {

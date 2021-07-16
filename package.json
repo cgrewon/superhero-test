@@ -1,8 +1,7 @@
 {
   "name": "superhero",
   "version": "0.1.0",
-  "private": true,
-  "proxy": "https://superheroapi.com",
+  "private": true,  
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.0",
     "@testing-library/jest-dom": "^5.11.4",

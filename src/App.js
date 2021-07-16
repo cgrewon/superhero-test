@@ -18,7 +18,7 @@ function App() {
 
         <div className="wrapper">
           <Switch>
-            <Route path="/history">
+            <Route path="/history/">
               <History />
             </Route>
             <Route path="/detail/:id">
