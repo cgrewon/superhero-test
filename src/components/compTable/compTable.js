@@ -8,7 +8,7 @@ export default function CompTable({ hero1, hero2, onReset }) {
   const dispatch = useDispatch();
 
   const getStr = (val) => {
-    return val && val != "null" && val != "undefined" ? val : "-";
+    return val && val !== "null" && val !== "undefined" ? val : "-";
   };
   const onHero1 = () => {
     dispatch(setSelHero(hero1));

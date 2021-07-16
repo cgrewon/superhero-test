@@ -10,23 +10,20 @@ import CompTable from "../../components/compTable/compTable";
 import { useSelector, useDispatch } from "react-redux";
 import {
   setResult,
-  initResult,
   setSelHero,
   setKeyword,
   setSelHeroes,
   addHistory,
 } from "../../store/searchSlice";
-import { useParams } from "react-router-dom";
 
-export default function Search({}) {
-  //   const [heroes, setHeroes] = React.useState([]);
+export default function Search() {
   const dispatch = useDispatch();
   const heroes = useSelector((state) => state.search.results);
 
   const keyword = useSelector((state) => state.search.keyword);
 
   let params = window.location.href.split("/");
-  let key = params && params.length == 5 ? params[params.length - 1] : null;
+  let key = params && params.length === 5 ? params[params.length - 1] : null;
   // const { key } = useParams();
 
   const [isLoading, setIsLoading] = React.useState(false);
@@ -42,18 +39,8 @@ export default function Search({}) {
     }
   }, []);
 
-  // React.useEffect(() => {
-  //   // alert(key);
-  //   if (key) {
-  //     setTimeout(() => {
-  //       dispatch(setKeyword(key));
-  //       handleSearch();
-  //     }, 500);
-  //   }
-  // }, [key]);
-
   React.useEffect(() => {
-    if (selHeroes && selHeroes.length == 2) {
+    if (selHeroes && selHeroes.length === 2) {
       handleCompare();
     }
   }, [selHeroes]);
@@ -140,7 +127,7 @@ export default function Search({}) {
 
   const handleSelect = (hero, isSelected) => {
     if (isSelected) {
-      let newHeroes = selHeroes.filter((aHero) => aHero.id != hero.id);
+      let newHeroes = selHeroes.filter((aHero) => aHero.id !== hero.id);
       dispatch(setSelHeroes(newHeroes));
 
       return;

@@ -3,14 +3,13 @@ import "./history.scss";
 import { useSelector, useDispatch } from "react-redux";
 import {
   removeHistory,
-  initHistory,
   setResult,
   setKeyword,
   setSelHeroes,
 } from "../../store/searchSlice";
 import XMark from "../../assets/x-mark.svg";
 
-function History({}) {
+function History() {
   const histories = useSelector((state) => state.search.history);
   const dispatch = useDispatch();
   const handleDelete = (e, index) => {
@@ -53,7 +52,7 @@ function History({}) {
                           className="btn-del"
                           onClick={(e) => handleDelete(e, index)}
                         >
-                          <img src={XMark} width={30} />
+                          <img src={XMark} width={30} alt="hero" />
                         </div>
                       </td>
                     </tr>

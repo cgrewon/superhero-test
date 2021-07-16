@@ -1,14 +1,11 @@
 import React from "react";
-import HeroItem from "../../components/heroItem/HeroItem";
+
 import "./detail.scss";
 import DefImg from "../../assets/def.png";
 
-import { useParams } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
-import { setSelHero } from "../../store/searchSlice";
+import { useSelector } from "react-redux";
 
-function Detail({}) {
-  const { id } = useParams();
+function Detail() {
   const hero = useSelector((state) => state.search.selHero);
 
   const [avatar, setAvatar] = React.useState(

@@ -4,7 +4,7 @@ import "./nav.scss";
 import { useDispatch } from "react-redux";
 import { setKeyword, setResult, setSelHeroes } from "../../store/searchSlice";
 
-export default function Nav({}) {
+export default function Nav() {
   const dispatch = useDispatch();
 
   const handleSearch = () => {

@@ -33,7 +33,7 @@ function HeroItem({
       <div className="item-container">
         <img
           src={avatar}
-          alt="hero photo"
+          alt="hero"
           onError={(e) => {
             setAvatar(DefImg);
           }}
@@ -49,7 +49,7 @@ function HeroItem({
             className={selected ? "selector selected" : "selector"}
             onClick={(e) => handleSelect(e)}
           >
-            <img src={icoCheck} className="svg-check" />
+            <img src={icoCheck} className="svg-check" alt="hero" />
           </div>
         ) : null}
       </div>
