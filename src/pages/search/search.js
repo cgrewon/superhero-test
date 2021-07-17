@@ -144,7 +144,7 @@ export default function Search() {
 
   return (
     <div className="container">
-      <div className="title">Find Super Hero Here!</div>
+      <h1 className="title">Find Super Hero Here!</h1>
       <div className="searchBox">
         <form onSubmit={(e) => handleSearch(e)}>
           <div className="row">

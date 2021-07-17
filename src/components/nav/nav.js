@@ -15,7 +15,7 @@ export default function Nav() {
   return (
     <nav className="nav-wrapper">
       <div className="nav-logo">
-        <span className="logo-title">SuperHero</span>
+        <h1 className="logo-title">SuperHero</h1>
       </div>
       <div className="space"></div>
       <div className="menu">

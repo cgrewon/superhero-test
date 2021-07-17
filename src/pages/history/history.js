@@ -24,7 +24,7 @@ function History() {
   };
   return (
     <div className="container details history">
-      <div className="title">History </div>
+      <h1 className="title">History </h1>
 
       <div className="exp-head"></div>
 

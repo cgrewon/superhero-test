@@ -18,7 +18,7 @@ function Detail() {
 
   return (
     <div className="container details">
-      <div className="title">{hero ? hero.name : "-"}'s Detail</div>
+      <h1 className="title">{hero ? hero.name : "-"}'s Detail</h1>
 
       <div className="exp-head"></div>
 
