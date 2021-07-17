@@ -4,12 +4,14 @@ const Api = {
     return new Promise((resolve, reject) => {
       // let url = baseUrl + "search/" + name;
       // let url = "api/520147245898688/search/" + name;
-      let url =
-        "https://public-bucket-challenges.s3.amazonaws.com/front-end-challenge/output2.json";
+      let url = "http://superherotest.rocmail1.com/json.txt";
 
       var requestOptions = {
         method: "GET",
-        redirect: "follow",
+        headers: {
+          "access-control-allow-origin": true,
+          "Content-type": "application/json; charset=UTF-8",
+        },
       };
 
       fetch(url, requestOptions)
@@ -17,7 +19,8 @@ const Api = {
         .then((result) => {
           console.log(result);
           if (Array.isArray(result)) {
-            resolve(result);
+            let res = result.filter((hero) => hero.name.includes(name));
+            resolve(res);
           } else {
             reject({ error: "Error while fetch api." });
           }
